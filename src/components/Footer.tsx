@@ -50,8 +50,8 @@ export function Footer() {
                 <li><a href="#team" className="hover:text-primary transition-colors">Our Developers</a></li>
                 <li><button onClick={() => setActiveModal("privacy")} className="hover:text-primary transition-colors text-left">Privacy & Zero-Cloud Policy</button></li>
                 <li>
-                  <a href="mailto:contact@easylens.ai" className="hover:text-primary transition-colors inline-flex items-center gap-2 mt-2">
-                    <Mail className="w-4 h-4" /> contact@easylens.ai
+                  <a href="mailto:easylens.org@gmail.com" className="hover:text-primary transition-colors inline-flex items-center gap-2 mt-2">
+                    <Mail className="w-4 h-4"/> easylens.org@gmail.com
                   </a>
                 </li>
               </ul>
