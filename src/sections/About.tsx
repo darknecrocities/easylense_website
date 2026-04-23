@@ -1,9 +1,20 @@
 "use client";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { GlassCard } from "@/components/GlassCard";
-import { Zap, ShieldAlert, Sparkles } from "lucide-react";
+import { Zap, ShieldAlert, Sparkles, Volume2, VolumeX } from "lucide-react";
 
 export function AboutSection() {
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
+
   return (
     <section id="philosophy" className="py-32 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
@@ -14,10 +25,38 @@ export function AboutSection() {
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
             Technology that <span className="text-gradient">Empowers.</span>
           </h2>
-          <p className="text-lg text-foreground/70 leading-relaxed">
+          <p className="text-lg text-foreground/70 leading-relaxed mb-12">
             At the heart of EasyLens is the belief that technology should not just assist, but empower. 
             Our design is guided by three non-negotiable pillars.
           </p>
+
+          <motion.div 
+             initial={{ opacity: 0, scale: 0.95 }}
+             whileInView={{ opacity: 1, scale: 1 }}
+             viewport={{ once: true }}
+             transition={{ duration: 0.7 }}
+             className="relative aspect-video w-full rounded-3xl overflow-hidden glass shadow-[0_0_50px_rgba(65,105,225,0.15)] mb-20 group"
+          >
+             <video 
+               ref={videoRef}
+               src="/videos/main2.mp4" 
+               autoPlay 
+               loop 
+               muted={isMuted}
+               playsInline 
+               className="object-cover w-full h-full"
+             />
+             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 pointer-events-none" />
+
+             {/* Audio Toggle Button */}
+             <button
+               onClick={toggleMute}
+               className="absolute bottom-6 right-6 z-30 p-3 rounded-full glass hover:bg-white/20 transition-all font-bold flex items-center gap-3 backdrop-blur-xl border border-white/30 shadow-lg"
+             >
+                {isMuted ? <VolumeX className="w-5 h-5 text-foreground/70" /> : <Volume2 className="w-4 h-4 text-green-400" />}
+                <span className={`text-sm ${isMuted ? "text-foreground/70" : "text-white"}`}>{isMuted ? "Unmute" : "Audio Active"}</span>
+             </button>
+          </motion.div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">

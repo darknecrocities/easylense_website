@@ -1,4 +1,5 @@
 import { HeroSection } from "@/sections/Hero";
+import { VideoShowcaseSection } from "@/sections/VideoShowcase";
 import { AboutSection } from "@/sections/About";
 import { FeaturesSection } from "@/sections/Features";
 import { AppPreviewSection } from "@/sections/AppPreview";
@@ -20,6 +21,7 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full min-h-screen overflow-x-hidden">
       <HeroSection />
+      <VideoShowcaseSection />
       <LogoCloud />
       <AboutSection />
       <FeaturesSection />
