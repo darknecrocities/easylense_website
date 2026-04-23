@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   title: "EasyLens | See Smarter with AI Vision",
   description: "AI-powered vision that understands your world in real-time. Experience real-time object detection and intelligent insights.",
   keywords: ["AI", "Computer Vision", "Object Detection", "Accessibility", "Mobile App"],
+  icons: {
+    icon: "/images/icons/app_icon_logo.png",
+    apple: "/images/icons/app_icon_logo.png",
+  },
 };
 
 export default function RootLayout({

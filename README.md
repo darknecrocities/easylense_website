@@ -17,7 +17,17 @@ This front-end documentation platform leverages a modern, rapid rendering stack:
 - **Icons**: Lucide React
 - **Themes**: next-themes (Dark Mode Default)
 
-## ✨ Ecosystem Features Showcased
+## ✨ Key App Capabilities
+
+- **Real-Time Environment Auditing**: Leveraging the "Eagle Eye" pipeline to detect hazards, obstacles, and navigation markers at sub-100ms latency.
+- **Bi-Directional IoT Sync**: Seamlessly pushes haptic pulse commands to the Smart Glasses while pulling wide-angle video telemetry via the ESP32-S3 node.
+- **Multimodal AI Assistant**: A persistent, vision-aware LLM (TinyLlama) that can answer spatial questions like "Where is the nearest seating area?" without ever leaving the device.
+- **Visual Intelligence Modes**:
+  - **Standard**: Optimized for sidewalk navigation and pedestrian crossings.
+  - **Indoor High-Precision**: Focused on identifying stairs, doorways, and floor hazards.
+  - **Low-Light (Neural Gain)**: AI-enhanced frame analysis for night-time autonomy.
+
+## ✨ Web Platform Modules
 
 The website provides rich interactive modules detailing the core EasyLens systems:
 - **The "Smart Vision" Stack**: Explaining the orchestration between the Flutter Mobile Hub and the dual-link ESP32-S3 IoT Glasses.

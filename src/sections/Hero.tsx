@@ -1,15 +1,36 @@
 "use client";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/Button";
 import { GitBranch as Github } from "lucide-react";
 import Image from "next/image";
 
 export function HeroSection() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const { clientX, clientY } = e;
+      const { innerWidth, innerHeight } = window;
+      const x = (clientX / innerWidth - 0.5) * 20;
+      const y = (clientY / innerHeight - 0.5) * 20;
+      setMousePosition({ x, y });
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20">
-      {/* Background Decor */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] -z-10" />
-      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent/20 rounded-full blur-[150px] -z-10" />
+      {/* Background Decor with Parallax */}
+      <motion.div 
+        animate={{ x: mousePosition.x * -1.5, y: mousePosition.y * -1.5 }}
+        className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] -z-10" 
+      />
+      <motion.div 
+        animate={{ x: mousePosition.x * 2.5, y: mousePosition.y * 2.5 }}
+        className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent/20 rounded-full blur-[150px] -z-10" 
+      />
       
       <div className="container mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-12 items-center">
         <motion.div 
@@ -48,12 +69,17 @@ export function HeroSection() {
 
         <motion.div
            initial={{ opacity: 0, scale: 0.95 }}
-           animate={{ opacity: 1, scale: 1 }}
-           transition={{ duration: 1, delay: 0.2 }}
-           className="relative mx-auto w-full max-w-[450px] lg:max-w-none aspect-[4/5] lg:aspect-square flex items-center justify-center"
+           animate={{ 
+             opacity: 1, 
+             scale: 1,
+             rotateY: mousePosition.x * 0.5,
+             rotateX: mousePosition.y * -0.5
+           }}
+           transition={{ duration: 0.1, type: "spring", stiffness: 300, damping: 20 }}
+           className="relative mx-auto w-full max-w-[450px] lg:max-w-none aspect-[4/5] lg:aspect-square flex items-center justify-center perspective-[1000px]"
         >
           <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent rounded-[3rem] -rotate-3 scale-[1.05] -z-10 blur-2xl" />
-          <div className="relative w-[320px] h-[650px] md:w-[380px] md:h-[750px] rounded-[3rem] overflow-hidden glass border-white/20 shadow-[0_20px_60px_-15px_rgba(65,105,225,0.4)] p-2 bg-[#0B0F1A]">
+          <div className="relative w-[320px] h-[650px] md:w-[380px] md:h-[750px] rounded-[3rem] overflow-hidden glass border-white/20 shadow-[0_20px_60px_-15px_rgba(65,105,225,0.4)] p-2 bg-[#0B0F1A] transform-style-3d">
             <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden">
                <Image 
                  src="/images/main_banner.png" 
