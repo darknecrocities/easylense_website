@@ -13,17 +13,17 @@ export function TeamSection() {
     },
     {
       name: "Jian Kalel D. Marquez",
-      role: "AI/ML Engineer",
+      role: "Hardware Engineer",
       image: "/images/profiles/kalel.jpeg"
     },
     {
       name: "Arron Kian M. Parejas",
-      role: "Backend & Systems Architect",
+      role: "AI/ML Engineer and Fullstack Lead",
       image: "/images/profiles/arron.jpg"
     },
     {
       name: "Jenica Sarah B. Tongol",
-      role: "Frontend Engineer & QA",
+      role: "UI/UX Lead and QA Engineer",
       image: "/images/profiles/jenica.png"
     }
   ];
