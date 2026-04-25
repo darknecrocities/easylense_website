@@ -6,6 +6,7 @@ import { AppPreviewSection } from "@/sections/AppPreview";
 import { ScenariosSection } from "@/sections/Scenarios";
 import { HowItWorksSection } from "@/sections/HowItWorks";
 import { IntelligenceSection } from "@/sections/Intelligence";
+import { AICameraSection } from "@/sections/AICamera";
 import { TechStackSection } from "@/sections/TechStack";
 import { SecurityAndHardwareSection } from "@/sections/SecurityAndHardware";
 import { RoadmapSection } from "@/sections/Roadmap";
@@ -30,6 +31,7 @@ export default function Home() {
       <ScenariosSection />
       <HowItWorksSection />
       <IntelligenceSection />
+      <AICameraSection />
       <SecurityAndHardwareSection />
       <TechStackSection />
       <TestimonialsSection />

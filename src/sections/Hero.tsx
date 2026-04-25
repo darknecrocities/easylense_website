@@ -41,7 +41,7 @@ export function HeroSection() {
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass w-fit border-primary/30">
              <Image src="/images/icons/main-logo.png" alt="Icon" width={16} height={16} className="opacity-90"/>
-            <span className="text-xs font-semibold tracking-wide uppercase">Open Source Project</span>
+            <span className="text-xs font-semibold tracking-wide uppercase">Research Project</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1]">

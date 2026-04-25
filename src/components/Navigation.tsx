@@ -31,6 +31,7 @@ export function Navigation() {
     { label: "Philosophy", href: "#philosophy" },
     { label: "Architecture", href: "#architecture" },
     { label: "Intelligence", href: "#intelligence" },
+    { label: "AI Camera", href: "#ai-camera" },
     { label: "IoT Glasses", href: "#hardware" },
     { label: "Team", href: "#team" },
   ];
@@ -74,6 +75,11 @@ export function Navigation() {
               <div className="w-5 h-5" />
             )}
           </button>
+          <a href="#ai-camera" className="hidden lg:inline-block">
+             <Button variant="glass" size="sm" className="border-primary/30 text-primary hover:bg-primary/10">
+               Live Showcase
+             </Button>
+          </a>
           <a href="https://github.com/darknecrocities/EasyLense" target="_blank" rel="noopener noreferrer" className="hidden md:inline-block">
              <Button variant="primary" size="sm">
                View on GitHub
@@ -110,6 +116,11 @@ export function Navigation() {
                   {link.label}
                 </a>
               ))}
+              <a href="#ai-camera" onClick={() => setMobileMenuOpen(false)} className="mt-2 block">
+                 <Button variant="glass" className="w-full border-primary/30 text-primary">
+                   Live Showcase
+                 </Button>
+              </a>
               <a href="https://github.com/darknecrocities/EasyLense" target="_blank" rel="noopener noreferrer" className="mt-2 block">
                  <Button variant="primary" className="w-full">
                    View on GitHub
