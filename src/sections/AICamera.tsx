@@ -88,7 +88,7 @@ export function AICameraSection() {
                  <div className="relative aspect-video rounded-xl overflow-hidden bg-black border border-white/5">
                     <video
                       ref={videoRef}
-                      src="/videos/AI_camera.mov"
+                      src="/videos/AI_camera.mp4"
                       autoPlay
                       loop
                       muted
