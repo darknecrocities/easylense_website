@@ -30,7 +30,7 @@ export function TechStackSection() {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
            {stack.map((item, idx) => (
               <motion.div
                  key={item.cat}

@@ -6,6 +6,7 @@ import { useTheme } from "next-themes";
 import { Button } from "./Button";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Navigation() {
   const { theme, setTheme } = useTheme();
@@ -28,12 +29,13 @@ export function Navigation() {
   };
 
   const navLinks = [
-    { label: "Philosophy", href: "#philosophy" },
-    { label: "Architecture", href: "#architecture" },
-    { label: "Intelligence", href: "#intelligence" },
-    { label: "AI Camera", href: "#ai-camera" },
-    { label: "IoT Glasses", href: "#hardware" },
-    { label: "Team", href: "#team" },
+    { label: "Philosophy", href: "/#philosophy" },
+    { label: "Architecture", href: "/#architecture" },
+    { label: "Intelligence", href: "/#intelligence" },
+    { label: "AI Camera", href: "/#ai-camera" },
+    { label: "IoT Glasses", href: "/#hardware" },
+    { label: "Team", href: "/#team" },
+    { label: "Download", href: "/download" },
   ];
 
   return (
@@ -43,23 +45,23 @@ export function Navigation() {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3">
           <Image src="/images/icons/app_icon_logo.png" alt="EasyLens" width={48} height={48} className="object-contain" />
           <span className="text-xl font-bold tracking-tight text-foreground">
             Easy<span className="text-primary">Lens</span>
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6 lg:gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
               href={link.href}
               className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -107,14 +109,14 @@ export function Navigation() {
           >
             <nav className="flex flex-col p-4 gap-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-base font-medium text-foreground hover:text-primary transition-colors"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
               <a href="#ai-camera" onClick={() => setMobileMenuOpen(false)} className="mt-2 block">
                  <Button variant="glass" className="w-full border-primary/30 text-primary">
