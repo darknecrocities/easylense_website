@@ -83,21 +83,21 @@ export function BetaReservationSection() {
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-8 leading-none">
-                  Join the <span className="text-gradient">100 Beta</span> Elite
+                  Join the First <span className="text-gradient">100 App Testers</span>
                 </h2>
                 
                 <p className="text-xl text-foreground/70 mb-10 leading-relaxed max-w-xl">
-                  We've expanded our capacity to **100 exclusive slots**. Secure yours now to influence the roadmap of AI visual intelligence before Phase 1 closes.
+                  We&apos;ve expanded our capacity to <strong className="font-bold text-foreground">100 exclusive slots</strong>. Secure yours now to be the first to experience the live EasyLens application on your own device.
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-6 mb-12">
                   {[
+                    { title: "Live App Access", desc: "Be among the first 100 to test the production-ready application." },
                     { title: "Priority AI Engine", desc: "First access to next-gen inference models." },
                     { title: "Personal Onboarding", desc: "1-on-1 session with our engineering team." },
                     { title: "Exclusive Community", desc: "Private access to the Alpha Discord channel." },
-                    { title: "Elite Rewards", desc: "Lifetime discount and unique Founder badge." },
                     { title: "Direct Feedback", desc: "Your requests prioritized in the roadmap." },
-                    { title: "Beta Merch", desc: "Limited edition physical gear for top testers." }
+                    { title: "Experimental Tools", desc: "Early access to unreleased spatial reasoning features." }
                   ].map((benefit, i) => (
                     <motion.div 
                       key={i}
