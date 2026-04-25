@@ -40,14 +40,14 @@ export function Navigation() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass border-b border-white/10 py-3" : "bg-transparent py-5"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 navbar-glass ${
+        isScrolled ? "border-b border-white/10 py-3" : "border-b border-transparent py-5"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <Image src="/images/icons/app_icon_logo.png" alt="EasyLens" width={48} height={48} className="object-contain" />
-          <span className="text-xl font-bold tracking-tight text-foreground">
+          <span className="text-xl font-bold tracking-tight text-foreground nav-text-shadow">
             Easy<span className="text-primary">Lens</span>
           </span>
         </Link>
@@ -58,7 +58,7 @@ export function Navigation() {
             <Link
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+              className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors nav-text-shadow"
             >
               {link.label}
             </Link>
@@ -105,7 +105,7 @@ export function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass border-t border-white/10 mt-3 overflow-hidden"
+            className="md:hidden navbar-glass border-t border-white/10 mt-3 overflow-hidden"
           >
             <nav className="flex flex-col p-4 gap-4">
               {navLinks.map((link) => (
@@ -113,7 +113,7 @@ export function Navigation() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-base font-medium text-foreground hover:text-primary transition-colors"
+                  className="text-base font-medium text-foreground hover:text-primary transition-colors nav-text-shadow"
                 >
                   {link.label}
                 </Link>
