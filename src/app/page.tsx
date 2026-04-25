@@ -14,6 +14,7 @@ import { FAQSection } from "@/sections/FAQ";
 import { TeamSection } from "@/sections/Team";
 import { GroupInfoSection } from "@/sections/GroupInfo";
 import { CTASection } from "@/sections/CTA";
+import { BetaReservationSection } from "@/sections/BetaReservation";
 import { LogoCloud } from "@/components/LogoCloud";
 import { Footer } from "@/components/Footer";
 
@@ -36,6 +37,7 @@ export default function Home() {
       <FAQSection />
       <TeamSection />
       <GroupInfoSection />
+      <BetaReservationSection />
       <CTASection />
       <Footer />
     </div>
