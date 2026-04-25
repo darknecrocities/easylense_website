@@ -37,6 +37,12 @@ body {
   overflow-x: hidden;
 }
 
+@media (pointer: fine) {
+  body, a, button, [role="button"], input, textarea {
+    cursor: none !important;
+  }
+}
+
 .glass {
   background: var(--panel-bg);
   backdrop-filter: blur(16px);
