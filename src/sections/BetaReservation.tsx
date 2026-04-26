@@ -83,19 +83,17 @@ export function BetaReservationSection() {
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-8 leading-none">
-                  Join the First <span className="text-gradient">100 Applicants</span>
+                  Join the First <span className="text-gradient">100 Participants</span>
                 </h2>
                 
                 <p className="text-xl text-foreground/70 mb-10 leading-relaxed max-w-xl">
-                  We are opening <strong className="font-bold text-foreground">100 exclusive slots</strong> for our beta phase. From these applicants, <strong className="font-bold text-primary">15 participants</strong> will be carefully selected for our in-depth thesis study and technical analysis.
+                  We are opening <strong className="font-bold text-foreground">100 exclusive slots</strong> for our beta phase. From these Participants, <strong className="font-bold text-primary">15 participants</strong> will be carefully selected for our in-depth thesis study and technical analysis.
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-6 mb-12">
                   {[
                     { title: "Thesis Study Selection", desc: "15 visionaries will be chosen from 100 applicants for an in-depth study." },
                     { title: "Priority AI Engine", desc: "First access to next-gen inference models." },
-                    { title: "Personal Onboarding", desc: "1-on-1 session with our engineering team." },
-                    { title: "Exclusive Community", desc: "Private access to the Alpha Discord channel." },
                     { title: "Direct Feedback", desc: "Your requests prioritized in the roadmap." },
                     { title: "Experimental Tools", desc: "Early access to unreleased spatial reasoning features." }
                   ].map((benefit, i) => (
@@ -164,19 +162,6 @@ export function BetaReservationSection() {
                     transition={{ duration: 1.5, ease: "easeOut" }}
                     className="h-full rounded-full bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] animate-gradient shadow-[0_0_25px_rgba(65,105,225,0.6)]"
                   />
-                </div>
-
-                <div className="grid grid-cols-2 gap-6 mb-10">
-                  <div className="p-6 rounded-2xl bg-white/5 border border-white/10 text-center group hover:bg-white/10 transition-colors">
-                    <Users className="w-8 h-8 mx-auto mb-3 text-primary group-hover:scale-110 transition-transform" />
-                    <div className="text-xs text-foreground/40 uppercase font-bold tracking-widest">Active Interest</div>
-                    <div className="text-xl font-black">1,248+</div>
-                  </div>
-                  <div className="p-6 rounded-2xl bg-white/5 border border-white/10 text-center group hover:bg-white/10 transition-colors">
-                    <Timer className="w-8 h-8 mx-auto mb-3 text-accent group-hover:scale-110 transition-transform" />
-                    <div className="text-xs text-foreground/40 uppercase font-bold tracking-widest">Wait Time</div>
-                    <div className="text-xl font-black">~24h</div>
-                  </div>
                 </div>
 
                 <div className={currentSlots >= totalSlots ? "pointer-events-none opacity-80" : ""}>
