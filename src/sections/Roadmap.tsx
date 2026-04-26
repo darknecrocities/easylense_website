@@ -7,8 +7,8 @@ export function RoadmapSection() {
     { phase: "Phase 1 - 4", title: "Foundation & Vision Beta", body: "Firebase, ML Kit validation, TinyLlama local LLM integration, and Interface HUD.", status: "complete" },
     { phase: "Phase 5", title: "Navigation & Pathing", body: "Vibration Navigation calibration, OSRM deployment, and robust edge pathing.", status: "complete" },
     { phase: "Phase 6", title: "Hardware Scaling", body: "Mass producing Smart Glasses V2 configurations and optimizing the ESP32-S3 logic.", status: "complete" },
-    { phase: "Phase 7", title: "Community Labels", body: "Allowing users to name their own custom object models locally.", status: "active" },
-    { phase: "Phase 8", title: "Social Beacon", body: "Multi-user Shared Vision instances for assisted group tracking.", status: "pending" }
+    { phase: "Phase 7", title: "Community Labels", body: "Allowing users to name their own custom object models locally.", status: "complete" },
+    { phase: "Phase 8", title: "Social Beacon", body: "Multi-user Shared Vision instances for assisted group tracking.", status: "complete" }
   ];
 
   return (

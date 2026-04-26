@@ -26,55 +26,60 @@ export function AboutSection() {
             Technology that <span className="text-gradient">Empowers.</span>
           </h2>
           <p className="text-lg text-foreground/70 leading-relaxed mb-12">
-            At the heart of EasyLens is the belief that technology should not just assist, but empower. 
-            Our design is guided by three non-negotiable pillars.
+            EasyLens was born from a commitment to the community—especially those with limited access to expensive assistive technologies.
+            We believe that high-end AI should be a right, not a luxury. Our design is guided by four non-negotiable pillars.
           </p>
 
-          <motion.div 
-             initial={{ opacity: 0, scale: 0.95 }}
-             whileInView={{ opacity: 1, scale: 1 }}
-             viewport={{ once: true }}
-             transition={{ duration: 0.7 }}
-             className="relative aspect-video w-full rounded-3xl overflow-hidden glass shadow-[0_0_50px_rgba(65,105,225,0.15)] mb-20 group"
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="relative aspect-video w-full rounded-3xl overflow-hidden glass shadow-[0_0_50px_rgba(65,105,225,0.15)] mb-20 group"
           >
-             <video 
-               ref={videoRef}
-               src="/videos/main2.mp4" 
-               autoPlay 
-               loop 
-               muted={isMuted}
-               playsInline 
-               className="object-cover w-full h-full"
-             />
-             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 pointer-events-none" />
+            <video
+              ref={videoRef}
+              src="/videos/main2.mp4"
+              autoPlay
+              loop
+              muted={isMuted}
+              playsInline
+              className="object-cover w-full h-full"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 pointer-events-none" />
 
-             {/* Audio Toggle Button */}
-             <button
-               onClick={toggleMute}
-               className="absolute bottom-6 right-6 z-30 p-3 rounded-full glass hover:bg-white/20 transition-all font-bold flex items-center gap-3 backdrop-blur-xl border border-white/30 shadow-lg"
-             >
-                {isMuted ? <VolumeX className="w-5 h-5 text-foreground/70" /> : <Volume2 className="w-4 h-4 text-green-400" />}
-                <span className={`text-sm ${isMuted ? "text-foreground/70" : "text-white"}`}>{isMuted ? "Unmute" : "Audio Active"}</span>
-             </button>
+            {/* Audio Toggle Button */}
+            <button
+              onClick={toggleMute}
+              className="absolute bottom-6 right-6 z-30 p-3 rounded-full glass hover:bg-white/20 transition-all font-bold flex items-center gap-3 backdrop-blur-xl border border-white/30 shadow-lg"
+            >
+              {isMuted ? <VolumeX className="w-5 h-5 text-foreground/70" /> : <Volume2 className="w-4 h-4 text-green-400" />}
+              <span className={`text-sm ${isMuted ? "text-foreground/70" : "text-white"}`}>{isMuted ? "Unmute" : "Audio Active"}</span>
+            </button>
           </motion.div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             {
               icon: <Zap className="w-8 h-8 text-yellow-400" />,
               title: "Radical Independence",
-              desc: "Built to work in subway tunnels and high-density cities alike. By prioritizing an edge-first approach, the most critical safety features never wait on a cloud response. You are never left blind by a poor signal."
+              desc: "Built to work in subway tunnels and high-density cities alike. By prioritizing an edge-first approach, critical safety features never wait on a cloud response. You are never left behind by a poor signal."
             },
             {
               icon: <ShieldAlert className="w-8 h-8 text-primary" />,
               title: "Predictive Safety",
-              desc: "Safety is not a feature; it's the foundation. Our pipeline detects negative obstacles and dynamic hazards faster than generic AI, using temporal tracking to predict intersections and provide proactive audio warnings."
+              desc: "Safety is not a feature; it's the foundation. Our pipeline detects dynamic hazards faster than generic AI, providing proactive audio warnings before a hazard becomes a crisis."
             },
             {
               icon: <Sparkles className="w-8 h-8 text-purple-400" />,
               title: "Crystal UX Paradigm",
-              desc: "Accessibility usually looks utilitarian. EasyLens provides a premium UI hitting WCAG 2.1 AAA compliance. We use Progressive Disclosure to reduce cognitive load entirely."
+              desc: "Accessibility should feel premium, not utilitarian. EasyLens provides a high-end UI hitting WCAG 2.1 AAA compliance, reducing cognitive load for a seamless experience."
+            },
+            {
+              icon: <div className="text-2xl">🤝</div>,
+              title: "Accessibility Equity",
+              desc: "Democratizing assistive tech for the underserved. We focus on low-cost hardware optimization and high-end AI software to bridge the gap for communities with low accessibility resources."
             }
           ].map((item, idx) => (
             <motion.div
