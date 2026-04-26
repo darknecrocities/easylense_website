@@ -83,16 +83,16 @@ export function BetaReservationSection() {
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-8 leading-none">
-                  Join the First <span className="text-gradient">100 App Testers</span>
+                  Join the First <span className="text-gradient">100 Applicants</span>
                 </h2>
                 
                 <p className="text-xl text-foreground/70 mb-10 leading-relaxed max-w-xl">
-                  We&apos;ve expanded our capacity to <strong className="font-bold text-foreground">100 exclusive slots</strong>. Secure yours now to be the first to experience the live EasyLens application on your own device.
+                  We are opening <strong className="font-bold text-foreground">100 exclusive slots</strong> for our beta phase. From these applicants, <strong className="font-bold text-primary">15 participants</strong> will be carefully selected for our in-depth thesis study and technical analysis.
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-6 mb-12">
                   {[
-                    { title: "Live App Access", desc: "Be among the first 100 to test the production-ready application." },
+                    { title: "Thesis Study Selection", desc: "15 visionaries will be chosen from 100 applicants for an in-depth study." },
                     { title: "Priority AI Engine", desc: "First access to next-gen inference models." },
                     { title: "Personal Onboarding", desc: "1-on-1 session with our engineering team." },
                     { title: "Exclusive Community", desc: "Private access to the Alpha Discord channel." },
@@ -206,7 +206,7 @@ export function BetaReservationSection() {
                 
                 <div className="mt-8 pt-8 border-t border-white/10 text-center">
                   <p className="text-sm text-foreground/40 italic">
-                    "Only 100 visionaries will participate in our first major stress-test phase. Don't miss out on Founder status."
+                    "From the initial 100 reservation slots, 15 participants will be carefully chosen for our thesis analysis and stress-test phase. Don't miss out."
                   </p>
                 </div>
               </motion.div>

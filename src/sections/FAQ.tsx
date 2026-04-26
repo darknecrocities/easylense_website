@@ -24,8 +24,8 @@ export function FAQSection() {
       answer: "Absolutely. Our 'Zero-Cloud' philosophy means your camera feed and voice interactions are processed locally. No raw data is ever sent to or stored on our servers."
     },
     {
-      question: "When will the beta participants be announced?",
-      answer: "We will be announcing all the selected participants during the early week of July. Stay tuned as we begin inviting users to test the application and help shape the future of EasyLens!"
+      question: "How are the beta participants selected?",
+      answer: "From our initial 100 reservation slots, 15 participants will be carefully selected for our in-depth thesis study and technical analysis. The announcement will be made in the early week of July."
     },
     {
       question: "How long is the battery life on the glasses?",
