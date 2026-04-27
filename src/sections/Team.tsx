@@ -12,7 +12,7 @@ export function TeamSection() {
   const team = [
     {
       name: "Graciella Mhervie D. Jimenez",
-      role: "Lead Developer & UI/UX Design",
+      role: "Project Manager & UI/UX Designer",
       image: "/images/profiles/graciella.jpg",
       icon: <Layout className="w-5 h-5" />,
       contributions: [
